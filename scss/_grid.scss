@@ -1,0 +1,53 @@
+﻿/* 布局类 */
+%g-col {
+	display: block;
+	margin-left: 5px;
+  	margin-right: 5px;
+  	width: 40px;
+  	float: left;
+}
+//总宽盒子
+.g-container {
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+	
+	@extend .f-clear;
+	//定义含有1-24列的宽度
+	@for $i from 1 through 24 {
+		.g-col-#{$i} { 
+			width: $i * (1200px / 24 - 10px) + ($i - 1) * 10px;
+		}	
+	}
+	@media only screen and (max-width: 1200px){
+		width: 960px;
+		@for $i from 1 through 24 {
+			.g-col-#{$i} { 
+				width: $i * (960px / 24 - 10px) + ($i - 1) * 10px;
+			}	
+		}
+	}
+}
+//每个column的共同特性
+@for $i from 1 through 24 {
+  	.g-col-#{$i} { 
+  		@extend %g-col;
+  	}	
+}
+//清除左外边距
+.alpha {
+  margin-left: 0;
+}
+.alpha-dbr {
+	margin-left: 0;
+	margin-right: 10px; 
+}
+//清楚右外边距
+.omega {
+  margin-right: 0;
+}
+.omega-dbl {
+	margin-right: 0;
+	margin-left: 10px;
+}
+/* 布局类结束 */

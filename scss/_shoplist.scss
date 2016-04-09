@@ -1,0 +1,126 @@
+﻿/* shoplist */
+.m-shoplist .m-content {
+
+	h1 {
+		height: 40px;
+    	line-height: 40px;
+    	background-color: #f7f7f7;
+    	font-size: 18px;
+    	font-weight: bold;
+    	text-indent: 20px;
+    	border-bottom: 1px solid #ddd;
+	} 
+	
+	.g-container {
+		margin: 60px auto;
+		border: 1px solid #ddd;
+	}
+
+	h2 {
+		height: 40px;
+    	line-height: 40px;
+    	text-indent: 20px;
+	}
+	.address,.time,.pay-way,.order-list{
+    	border-bottom: 1px solid #ddd;
+    	position: relative;
+    	padding-bottom: 15px;
+	}
+
+	.address {
+		.one-line {
+			height: 50px;
+			line-height: 50px;
+		}
+		.red-text {
+			color: red;
+		}
+		input {
+			height: 30px;
+			line-height: 30px;
+			width: 250px;
+			text-indent: 10px;
+			border: 1px solid #ddd;
+		}
+		select {
+			height: 30px;
+			border: 1px solid #ddd;
+		}
+	}
+
+	.detail {
+		margin-left: 20px;
+		padding-left: 30px;
+		&.time-detail{
+			height: 50px;
+			line-height: 50px;
+		}
+	}
+
+	.pay-way {
+
+		@extend .f-clear;
+
+		.cash,.online{
+
+			float: left;
+			height:35px;
+			line-height:35px;
+			width:120px;
+			margin-left: 50px;
+			border:1px solid #ccc;
+			text-align:center;
+			cursor:pointer;
+		}
+		.active{
+			color: $green;
+			border:1px solid $green;
+		}
+	}
+
+	.order-list {
+		.table-box{
+			margin: 0 50px;
+		}
+
+		table{
+			border: 1px solid #dddddd;
+			width: 100%;
+			border-collapse: collapse;
+		}
+		table th{
+			height: 30px;
+			line-height: 30px;
+			background-color: #f7f7f7;
+			text-align: center;
+			border-bottom: 1px solid #dddddd;
+		}
+		table td{
+			text-align:center;
+			padding:7px 0;
+		}
+	}
+
+	.order-foot {
+		border-bottom: 0px solid #fff;
+		height: 45px;
+    	background-color: #f5f5f5;
+    	input, div {
+    		height: 30px;
+    		line-height: 30px;
+    		float: right;
+    		margin-top: 7px;
+    		margin-right: 20px;
+    	}
+    	input {
+    		width: 100px;
+    		border: 0px;
+    		@extend .u-button;
+    	}
+    	.all-price {
+    		color: #ff8080;
+    	}
+	}
+}
+/* menu end */
+

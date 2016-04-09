@@ -1,0 +1,32 @@
+﻿/* about */
+.m-about {
+
+	margin: 40px 0;
+
+	h1{
+		padding-bottom: 20px;
+		margin-bottom: 40px;
+    	font-size: 30px;
+    	border-bottom: 2px solid $green;
+    	font-weight: 300;
+    	color: #686868;
+	}
+	p {
+		font-size: 25px;
+		line-height: 1.4;
+		margin-top: 20px;
+		font-family: 'Source Sans Light', 'Apple LiSung Light', 'STHeiti Light', SimSun, sans-serif;
+		text-indent: 50px;
+		
+		&.email {
+			color: $green;
+			font-size: 30px;
+		}
+
+		&.end {
+			text-align: right;
+			font-size: 30px;
+		}
+	}
+}
+/* about end */

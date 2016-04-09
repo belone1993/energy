@@ -1,0 +1,10 @@
+$(function(){
+	$('.problem').click(function(){
+		$(this).parent().parent().hide();
+		$(this).parent().parent().prev().hide();
+	})
+	$('#sub').click(function(){
+		$('.bg').show();
+		$('.bg').next().show();
+	})
+})

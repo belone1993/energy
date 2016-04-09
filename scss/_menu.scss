@@ -1,0 +1,292 @@
+﻿/* menu */
+.m-menu{
+	
+	background-color: $bg-color;
+
+	.menu-box, .notice {
+		 margin-top: 40px;
+		background-color: #fff;
+		line-height: 1.6;
+    	@include box-shadow( 2px 2px 6px #ccc);
+	}
+
+	.menu-box {
+
+
+		.nav {
+			
+			float: left;
+			position: relative;
+			left: 50%;
+			padding-top: 20px;
+			padding-bottom: 30px;
+
+			li {
+				position: relative;
+				float: left;
+				left: -50%;
+				margin-left: 100px;
+				width: 60px;
+				height: 16px;
+				font-size: 15px;
+				padding-top: 50px;
+				text-align: center;
+				@extend %sprite-bg;
+				cursor: pointer;
+				@include transition(all 0.5s ease);
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				&.drink-nav {
+					background-position: -180px -576px;
+				}
+				&.food-nav {
+					background-position: -240px -576px;
+				}
+				&.bread-nav {
+					background-position: -60px -576px;
+				}
+				&.discount-nav {
+					background-position: -120px -576px;
+				}
+
+				&:hover, &.active{
+					color: $green;
+					background-position-y: -639px;
+				}
+			}
+		}
+
+		.menu {
+
+			float: left;
+
+			li {
+				float: left;
+				width: 278px;
+				margin: 0;
+				border: 1px dashed #dddddd;
+				padding: 20px 0;
+				font-size: 14px;
+
+				&:hover {
+					border: 1px solid $green;
+				}
+
+				div {
+					padding-left: 20px;
+					padding-right: 20px; 
+					@extend .f-clear;
+				}
+
+				.img-box {
+					img {
+						width: 100%;
+					}
+				}
+				label, span{
+					line-height: 1.6;
+					display: block;
+					float: left;
+				}
+				label {
+					width: 24%;
+				}
+				span {
+					width: 76%;
+				}
+				.introduce {
+					min-height: 110px;
+				}
+				.add {
+					display: block;
+					width: 100px;
+					height: 30px;
+				    line-height: 30px;
+				    text-align: center;
+				    background: $green;
+				    color: #fff;
+				    cursor: pointer;
+				    @include border-radius(8px);
+				    margin: 0 auto;
+				}
+
+			}
+		}
+
+		@media only screen and (max-width: 1200px){
+			width: 669px;
+			.menu li {
+				width: 221px;
+			} 
+		}
+	}
+
+	.notice {
+		h1 {
+			padding: 5px 0;
+			text-align: center;	
+			color: $green;
+			font-size: 18px;
+		}
+		ol {
+			padding:0 20px 10px 40px;
+			li {
+				list-style-type: disc;
+			}
+		}
+	}
+
+	.shopcard {
+
+		position: fixed;
+		bottom: 0;
+		right: 50%;
+		margin-right: -595px;
+		border: 1px solid #ddd;
+		background-color: #fff;
+		
+		h1 {
+			width: 260px;
+			height: 40px;
+			margin: 0 auto;
+			@extend %sprite-bg;
+			background-position: 0 -700px;
+			text-indent: -9999px;
+		}
+
+		.order-th {
+			position: relative;
+			background-color: #f5f5f5;
+    		height: 30px;
+    		line-height: 30px;
+    		border-bottom: 1px solid #ddd;
+    		border-top: 1px solid #ddd;
+
+    		li {
+    			text-align: center;
+    			&.name {
+    				margin-right: 120px;
+    			}
+
+    			&.price, &.count {
+    				position: absolute;
+    				top: 0;
+    				right: 0px;
+    				width: 60px;
+    			}
+    			&.count {
+    				right: 60px;
+    			}
+    		}
+		}
+
+		.order-list {
+
+			.order-item {
+
+				position: relative;
+				height: 45px;
+    			line-height: 45px;
+    			border-bottom: 1px solid #ddd;
+
+    			span {
+					text-align: center;
+					display: block;
+					&.name {
+						margin-right: 120px;
+					}
+					&.price {
+						width: 60px;
+						height: 45px;
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+
+				.count-box {
+					width: 60px;
+					height: 17px;
+					position: absolute;
+					right: 60px;
+					top: 0;
+					padding: 14px 0;
+					a, span {
+						display: block;
+						float: left;
+						font-size: 10px;
+						border-top: 1px solid #ddd;
+					    border-bottom: 1px solid #ddd;
+					    line-height: 15px;
+					    height: 15px;
+					    text-align: center;
+					}
+					span {
+						width: 26px;
+					}
+					a {
+						width: 15px;
+						font-size: 14px;
+						border: {
+							left: 1px solid #ddd;
+							right: 1px solid #ddd;
+						}
+					}
+				}
+
+			}
+		}
+
+		.all {
+			height: 45px;
+			line-height: 45px;
+			text-align: right;
+			.all-price {
+				color: #ff8080;
+				margin-right: 20px;
+			}
+		}
+
+		.order-foot {
+			border-top: 1px solid #ddd;
+    		height: 40px;
+			background-color: #f5f5f5;
+
+			.clear {
+				float: left;
+				display: block;
+    			width: 100px;
+    			height: 25px;
+    			line-height: 25px;
+    			color: #ff8080;    			
+    			text-align: center;
+    			margin-top: 7px;
+    			margin-left: 15px;
+			}
+			.u-submit {
+    			float: right;
+    			width: 100px;
+    			height: 25px;
+    			line-height: 25px;
+    			@extend .u-button;
+    			text-align: center;
+    			margin-top: 7px;
+    			margin-right: 20px;
+    			border:0;
+			}
+		}
+
+		@media only screen and (max-width: 1200px){
+			margin-right: -475px;
+			h1 {
+				width: 230px;
+				background-position: -15px -700px;
+			}
+		}
+	}
+}
+/* menu end */
+

@@ -1,0 +1,114 @@
+﻿/* orderlist */
+.m-orderlist{
+	
+	.m-content {
+		margin-top: 40px;
+	}
+
+	.nav {
+		position: relative;
+		left: 50%;
+		margin-left: -200px;
+		float: left;
+		border: 1px solid #ddd;
+		background-color: #fff;
+
+		li {
+			float: left;
+		}
+		a {
+			padding: 11px 55px;
+			width: 90px;
+			display: block;
+			border-right: 1px solid #ddd;
+			font-size: 18px;
+			color: #8e8e8e;
+			&.active{
+				background-color: $green;
+				color: #fff;
+			}
+		}
+	}
+
+	.content {
+		
+		margin-top: 60px;
+		width: 100%;
+		float: left;
+		background-color: #fff;
+
+		@at-root .no-order {
+			width: 710px;
+			margin: 0 auto;
+		}
+
+		@at-root .one-order {
+			
+			margin-bottom: 30px;
+			background-color: #fff;
+			border: 1px solid #ccc;
+
+			.msg {
+					
+    			padding: 0 20px;
+    			height: 40px;
+				line-height: 40px;
+    			border-bottom: 1px solid #ccc;
+    			background-color: #f5f5f5;
+				
+				div {
+					float: left;
+					margin-right: 15px;
+				}
+
+				.order-time {
+					font-weight: bold;
+				}
+				span {
+					color: $orange;
+				}
+				.delete {
+					
+					float: right;
+					a {
+						color: $green;
+					}
+					a:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.detail {
+
+				width: 100%;
+				
+				td, th {
+					text-align: center;
+					border-right: 1px solid #ddd;
+					padding-bottom: 10px;
+
+					&.omega {
+						border-right: 0;
+					}
+
+				}
+				th {
+					height: 40px;
+					line-height: 40px;
+					font-weight: bold;
+					font-size: 15px;
+					&.order-content { width: 40%; }
+					&.order-msg { width: 25%; }
+					&.order-time { width: 20%; }
+					&.order-status { width: 15%; }
+				}
+				td {
+					line-height: 1.8;
+				}
+			}
+		}
+	}
+		
+}
+/* orderlist end */

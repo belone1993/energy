@@ -1,0 +1,76 @@
+﻿/* personal */
+.m-personal{
+	background-color: $bg-color;
+	.m-content {
+		.g-container {
+			margin-top: 40px;
+		}
+		.nav {
+			width: 200px;
+			position: absolute;
+			border: 1px solid #ddd;
+			background-color: #fff;
+			a {
+    			padding: 21px 55px;
+    			width: 90px;
+    			display: block;
+    			border-bottom: 1px solid #ddd;
+    			font-size: 18px;
+    			color: #8e8e8e;
+			}
+			.active a {
+				background-color: $green;
+				color: #fff;
+			}
+		}
+		.content {
+			margin-left: 250px;
+			h2 {
+				padding-bottom: 20px;
+			    font-size: 30px;
+			    border-bottom: 2px solid $green;
+			    font-weight: 300;
+			    color: #686868;
+			}
+			.detail {
+				margin-top: 20px;
+				padding: 20px;
+				border: 1px solid #ddd;
+				background-color: #fff;
+				min-height: 500px;
+				.one-item {
+					@extend .f-clear;
+					height: 60px;
+				}
+				
+				label, input, select, span{
+					display: block;
+					float: left;
+					height: 40px;
+					line-height: 40px;
+					margin-top: 10px;
+					font-size: 18px;
+					width: 78%;
+				}
+				input, select {
+					border: 1px solid #ddd;
+					text-indent: 15px;
+				}
+				label {
+					width: 20%;
+					text-align: right;
+				}
+				.u-submit {
+					@extend .u-button;
+					border: 0;
+					width: 150px;
+					position: relative;
+					left: 50%;
+					margin-left: -75px;
+				}
+			}
+		}
+		
+	}
+}
+/* personal end */

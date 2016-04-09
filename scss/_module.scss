@@ -1,0 +1,452 @@
+﻿/* 模块类 */
+/* 标语 */
+.m-banner {
+	position: relative;
+	padding-top: 1px;
+	height: 400px;
+	background-image: url(../img/data-bg.jpg);
+	background-size: cover;
+	font-family: 'Circular Std Book', sans-serif;
+	color:#fff;
+
+	.motto {
+		margin-top: 150px;
+		width: 100%;
+
+		&:after {
+			position: absolute;
+			left: 0;
+			bottom: 40px;
+			width: 100%;
+			display: block;
+			border-bottom: 1px solid #fff;
+			content: "";
+		}
+	}
+
+	h1 {
+		font-size: 45px;
+		height: 60px;
+		line-height: 60px;
+		margin-bottom:30px;
+	}
+	p {
+		font-size: 30px;
+		height:30px;
+		line-height:30px;
+	}
+
+	@media only screen and (max-width: 600px) {
+		display: none;
+	}
+
+}
+/* 作品列表 */
+.m-worklist {
+
+	padding-top:40px;
+	
+	.list-item {
+		position: relative;
+		height: 220px;
+		overflow: hidden;
+		margin-bottom: 40px;
+		background: #fff;
+		cursor: pointer;
+		@include box-shadow(0 2px 5px rgba(0,0,0,0.1));
+
+		@media only screen and (max-width: 1200px){
+			height: 180px;
+		}
+
+	}
+
+	.list-album{
+		position: relative;
+		top: 0;
+		img {
+			width: 100%;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+			transition: all 0.8s ease;
+		}
+	}
+	
+
+	.list-title {
+		position: absolute;
+		bottom: 0;
+		height: 40px;
+		width: 100%;
+		line-height: 40px;
+		font-size:14px;
+		text-indent: 10px;
+		background-color: #fff;
+		color: #989898;
+		@media only screen and (max-width: 1200px) {
+			height: 30px;
+			line-height: 30px;
+		}
+		span {
+			display: block;
+			float: right;
+			margin-right: 10px;
+			&:first-child {
+				float: left;
+			}
+		}
+	}
+	.list-info {
+		display: none;
+	}
+	//.list-info{z-index:98;bottom:-60px;left:0;height:70px;padding:10px;line-height:1.5;background:#fff;color:#535454;font-size:12px;}
+
+	.sub-nav {
+		margin-bottom: 30px;
+		background-color: #fff;
+		@include border-radius(3px);
+		@include box-shadow(0px 2px 5px rgba(0,0,0,0.1));
+		
+		li {
+			float: left;
+
+			&.z-crt a {
+				background-color:#31a030;color:#fff;
+			}
+
+			a {
+				display: block;
+				height: 50px;
+				line-height: 50px;
+				padding: 0 20px;
+				min-width: 100px;
+				text-align: center;
+				font-size: 18px;
+			}
+		}
+
+		
+	}
+	
+}
+/* 表单模块 */
+.m-form {
+
+	min-width: 300px;
+
+	.item {
+		margin-top: 15px;
+	}
+	.u-ipt {
+		display: block;
+		height: 20px;
+		line-height: 20px;
+		width: 100%;
+		border: 2px solid #f1f1f1;
+		margin-left: -2px;
+		padding: 12px 0px;
+		text-indent: 10px;
+		background: #fafafa;
+		font-size:16px;
+	}
+	.tip {
+		color: green;
+		padding: 5px;
+
+		&.error {
+			color: red;
+		}
+	}
+	.u-button {
+		font-size: 18px;
+		width: 100%;
+		height:40px;
+		line-height: 40px;
+
+		&.disabled {
+			background-color: #ddd;
+			color: #999;
+		}
+	}
+	.forget-pwd {
+		display: block;
+		width: 100%;
+		text-align: right;
+		a {
+			text-decoration: underline;
+			color: $green;
+		}
+	}
+}
+
+/* 评论类 */
+.m-comment {
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #eaeaea;
+
+	.cmt-form {
+		padding: 20px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	textarea {
+		display: block;
+		margin-left: -21px;
+		padding: 20px;
+		width: 100%;
+		height: 100px;
+		border: 1px solid #ddd;
+		font-size: 16px;
+        line-height: 1.6;
+	}
+
+	.u-button {
+		margin-left: -20px;
+		margin-top: 20px;
+		width: 200px;
+		height: 40px;
+	}
+
+	.no-cmt{
+		text-align: center;
+		font-size: 18px;
+	}
+
+	.cmt-content{
+		padding:20px 0;
+	}
+
+	.cmt-list {
+
+		line-height: 1.6;
+
+		> li {
+			margin-bottom: 30px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #ddd;
+
+			&:last-child {
+				border-bottom: 0px solid #ddd;
+			}
+		}
+
+		.head img {
+			display: block;
+		}
+
+		.content {
+			margin-left: 15px;
+			font-size: 16px;
+			overflow: hidden;
+		}
+
+		.response{
+			text-align: right;
+			&:hover{
+				color: $green;
+			}
+		}
+		span {
+			display: block;
+			font-size: 18px;
+
+			&.time {
+				padding-top: 5px;
+				margin-left: 10px;
+				color: #b8b8b8;
+				font-size: 14px;
+			}
+			&.parent-content {
+				padding:20px 0;
+			}
+
+			&.child-content {
+				font-size: 16px;
+			}
+			&.username {
+				margin-top:0;
+				color: $green;
+				font-size: 16px;
+				white-space: nowrap;
+			}
+		}
+		td {
+			vertical-align: top;
+		}
+
+		.child-comment li{
+			padding: 10px 0;
+			border-top: 1px dashed #ddd;
+		}
+
+		a.cancel {
+			margin-left: 10px;
+			margin-top: 26px;
+			float: left;
+			&:hover {
+				color: $green;
+			}
+		}
+
+		.cmt-form {
+			padding-bottom: 0px;
+			border-bottom: 0px solid #ddd;
+
+			.u-button {
+				float: left;
+			}
+		}
+	}
+	//分页器
+	.pager-box {
+		position: relative;
+		top: 0;
+		left: 50%;
+		float: left;
+
+		a, span {
+			position: relative;
+			left: -50%;
+			display:block;
+			width: 36px;
+			height: 36px;
+			float: left;
+			margin: 0 4px 0 0;
+			padding: 0;
+			border: 0;
+			border-radius: 2px;
+			line-height: 36px;
+			text-align: center;
+			color: #a9a9a9;
+			text-decoration: none;
+			font-size: 16px;
+			background-color: #f1f1f1;
+		}
+		a:hover {
+			background-color: #969696;
+			color: #fff;
+		}
+		.js-selected {
+			background-color: #31a030;
+			color:#fff;
+			&:hover {
+				background-color: #31a030;
+			}
+		}
+		.js-disabled:hover {
+			background-color: #f1f1f1;
+			color: #a9a9a9;
+		}
+		a.zprv,.pager a.znxt {
+			font-size: 20px;
+			font-weight: 500;
+		}
+	}
+}
+/* 作品详情类 */
+.m-work-detail{
+
+	padding-top: 20px;
+	@extend .f-clear;
+
+	.work-image {
+		width: 800px;
+		height: 420px;
+		overflow: hidden;
+		border: 1px solid rgba($gray, 0.26);
+		@include border-radius(5px);
+		@include box-shadow(0 7px 18px rgba(0,0,0,0.26));
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	h1 {
+		display: block;
+		margin-top: 20px;
+		font-weight: 400;
+		height: 40px;
+		float: left;
+		line-height: 40px;
+		color: #6f6f6f;
+		font-size: 25px;
+	}
+	.button {
+		display: block;
+		float: right;
+		margin-top: 20px;
+	}
+	.u-button {
+		height: 40px;
+		line-height: 40px;
+		width: 150px;
+		margin-left: 10px;
+		&.github {
+			background-color: $orange;
+			&:hover {
+				background-color: rgba($orange, 0.9);
+			}
+
+			&:active {
+				color: #fff;
+				background-color: $dark-orange;
+			}
+		}
+	}
+	.time, .description {
+		margin-top: 10px;
+	}
+	span {
+		display: block;
+		float: left;
+		font-size: 18px;
+		width: 740px;
+		line-height: 1.6;
+		color: rgb(134, 134, 134);
+		&:first-child {
+
+			width: 60px;
+		}
+	}
+}
+/* 博客类 */
+/* Demo */
+.m-demo{margin:30px 0px;padding:10px;background-color:#fff;border:1px solid #eaeaea;}
+.m-demo .title h1{padding:20px 0;text-align:center;font-size:24px;color:#555;}
+.m-demo .title .time{padding-right:20px;line-height:1.8;}
+.m-demo .title .classify{line-height:1.8;}
+.m-demo .title .subtt{border-bottom:1px solid #eaeaea;padding-bottom:30px;}
+.m-demo h2{margin:10px 0;font-size:16px;height:25px;line-height:25px;}
+.m-demo h3{margin:10px 0;font-weight: bold;}
+.m-demo .show{border:1px solid #ddd;}
+.m-demo .download{height:30px;border:1px solid #ccc;padding:5px 15px;line-height:30px;background-color:#ffffcc;}
+.m-demo .download a{color:#06c;}
+.m-demo .download a:hover{text-decoration:underline;}
+.m-demo .teach{padding:20px 10px;border:1px solid rgb(204, 204, 204);background-color:rgb(245, 245, 245);font-size:16px;}
+.m-demo .teach p{margin-left:25px;padding-left:1px;line-height:2;}
+.m-demo .teach span.highlight{color:deepskyblue;font-weight:400;}
+.m-demo .teach .code{margin:0 25px;}
+/* Canvas时钟 */
+.m-demo-clock .show{padding:20px 0;background-color:#207fad;border:0;}
+/* 足球落地碰撞 */
+.m-demo-football .bg{position: relative;height:550px;background-color:#eee;}
+.m-demo-football .ball{position:absolute;left:50%;top:0;z-index:1;width: 100px;height:100px;margin-left: -50px;background-image: url(/web/img/football.png);cursor: move;}
+.m-demo-football .shadow{position:absolute;left:50%;bottom:40px;width:100px;height:30px;margin-left:-50px;
+	background-image: -webkit-radial-gradient(ellipse closest-side, rgba(0,0,0,.8), rgba(0,0,0,0));
+	background-image: -moz-radial-gradient(ellipse closest-side, rgba(0,0,0,.8), rgba(0,0,0,0));
+	background-image: radial-gradient(ellipse closest-side, rgba(0,0,0,.8), rgba(0,0,0,0));
+}
+/* 元素拖拽 */
+.m-demo-drag .bg{position: relative;height:550px;background-color:#eee;}
+/* 分页器 */
+.m-demo-pager .show{padding:90px 0;height:20px;}
+.m-demo-jquery p{margin:10px 0;font-size:18px;line-height:1.6;}
+.m-demo-jquery a{text-decoration:underline;}
+.m-demo-jquery .next{text-align: center;}
+.m-demo-jquery .next .next{padding-left:60px;}
+.m-demo-jquery .teach{line-height:1.6;}
+/* 模块类结束 */

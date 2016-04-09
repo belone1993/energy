@@ -1,0 +1,27 @@
+﻿/* 功能类 */
+.f-clear:after {
+	display: block;
+	height: 0;
+	visibility: hidden;
+	clear: both;
+	content:'';
+}
+.f-float-right,.f-fr {
+	float: right;
+}
+.f-float-left, .f-fl {
+	float: left;
+}
+.f-hidden, .f-dn {
+	display: none;
+}
+.f-show, .f-db {
+	display: block;
+}
+.f-ib {
+	display: inline-block;
+}
+.f-tac {
+	text-align: center;
+}
+/* 功能类结束 */

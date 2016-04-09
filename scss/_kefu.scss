@@ -1,0 +1,44 @@
+﻿/* kefu */
+.m-kefu {
+	background-color: $bg-color;
+	.m-content {
+		.g-container {
+			margin-top: 40px;
+			@include box-shadow(5px 5px 15px #ddd);
+			background-color: #fff;
+		}
+		h1 {
+			margin: 10px 20px;
+			height: 40px;
+			//border-bottom: 1px solid $green;
+			line-height: 40px;
+			font-size: 20px;
+			color: $green;
+		}	
+		li{
+			@extend .f-clear;
+		}
+		.img {
+			width: 200px;
+			height: 150px;
+			margin-left: 5px;
+			@extend %sprite-bg;
+		}
+		.officialAccount .img {
+			background-position: -645px -350px;
+		}
+		.teamMember .img {
+			background-position: -645px -200px;
+		}
+		.detail {
+			margin-top: 15px;
+			font-size: 18px;
+			line-height: 1.6;
+		}
+		.websiteMsg ul {
+			padding-left: 10px;
+			padding-bottom: 20px;
+		}
+	}
+}
+/* kefu end */
